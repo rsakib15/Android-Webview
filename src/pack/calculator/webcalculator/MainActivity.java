@@ -26,6 +26,8 @@ public class MainActivity extends Activity {
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         myWebView.addJavascriptInterface(new WebAppInterface(this), "Android");
+        if()
+        myWebView.loadUrl("file:///android_asset/index.html");
     }
 	
 	public void clicked(View V){
@@ -49,7 +51,7 @@ public class MainActivity extends Activity {
 	protected void onResume() {
 		super.onResume();
 		Log.d("Entry-Log", "onResume() on MainActivity"); 
-		myWebView.loadUrl("file:///android_asset/index.html");
+		
 		
 	}
 	
